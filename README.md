@@ -363,7 +363,7 @@ Berikut tangkapan layar halaman utama Sistem Presensi Siswa.
 ## Informasi Project
 
 - **Nama aplikasi:** Sistem Presensi Siswa
-- **Jenis project:** Uji Unjuk Kerja (UUK) PPLG
+- **Jenis project:** Uji Unit Kompetensi (UUK) PPLG
 - **Metode presensi:** Simulasi tap berdasarkan NISN
 - **Database:** `presensi_siswa`
 - **File database:** `schema.sql`
