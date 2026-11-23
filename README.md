@@ -1,8 +1,23 @@
-# Sistem Presensi Siswa
+<div align="center">
 
-Aplikasi web untuk mengelola data kelas, data siswa, dan pencatatan kehadiran siswa melalui simulasi tap kartu menggunakan NISN. Project ini dibuat sebagai bagian dari Uji Unjuk Kerja (UUK) PPLG dengan PHP Native, PDO, dan MariaDB.
+<h1>Sistem Presensi Siswa</h1>
 
-> **Catatan:** Fitur tap pada aplikasi ini merupakan simulasi melalui input NISN. Integrasi dengan perangkat keras atau kartu RFID fisik tidak termasuk dalam project ini.
+<p>Aplikasi pengelolaan kelas, data siswa, dan presensi melalui simulasi tap menggunakan NISN.</p>
+
+<p><strong>Project Uji Unjuk Kerja (UUK) PPLG</strong></p>
+
+<p>
+  <img src="https://img.shields.io/badge/PHP-Native-777BB4?style=flat&logo=php&logoColor=white" alt="PHP Native">
+  <img src="https://img.shields.io/badge/Database-MariaDB-003545?style=flat&logo=mariadb&logoColor=white" alt="MariaDB">
+  <img src="https://img.shields.io/badge/Database_Access-PDO-555555?style=flat" alt="PDO">
+  <img src="https://img.shields.io/badge/Local_Server-Laragon-7DBA3B?style=flat" alt="Laragon">
+</p>
+
+</div>
+
+Aplikasi web ini dibuat menggunakan PHP Native, PDO, dan MariaDB untuk membantu administrator mengelola kelas, data siswa, serta pencatatan kehadiran.
+
+> 💡 **Catatan:** Fitur tap pada aplikasi ini merupakan simulasi melalui input NISN. Integrasi dengan perangkat keras atau kartu RFID fisik tidak termasuk dalam project ini.
 
 ---
 
@@ -358,4 +373,12 @@ Selain bukti pengujian, masukkan tangkapan layar halaman utama aplikasi ke folde
 
 ---
 
+<div align="center">
+
+---
+
 **Dibuat untuk memenuhi kebutuhan project Uji Unjuk Kerja (UUK) PPLG.**
+
+<sub>Sistem Presensi Siswa · PHP Native · MariaDB</sub>
+
+</div>
