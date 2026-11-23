@@ -134,8 +134,8 @@ Gunakan **satu akun administrator** yang sama untuk pengujian dan demonstrasi ap
 | Keterangan | Akun Demo |
 |---|---|
 | Jenis akun | Administrator |
-| Username | `ISI_USERNAME_DEMO` |
-| Password | `ISI_PASSWORD_DEMO` |
+| Username | `Willy` |
+| Password | `12345678` |
 
 > **Sebelum README dikumpulkan:** ganti `ISI_USERNAME_DEMO` dan `ISI_PASSWORD_DEMO` dengan informasi akun demo yang benar. Gunakan akun khusus demonstrasi dan pastikan akun tersebut tersedia pada database yang digunakan saat penilaian.
 
@@ -287,8 +287,6 @@ Masukkan tangkapan layar asli dari aplikasi yang berjalan ke folder `docs/screen
 ### 6. Rekap Presensi
 
 ![Rekap Presensi](docs/screenshots/06-rekap-presensi.png)
-
-> Pastikan keenam file gambar tersebut sudah dimasukkan sebelum project dikumpulkan. Simpan screenshot dengan format PNG dan gunakan nama file yang tercantum pada setiap bagian.
 
 ---
 
