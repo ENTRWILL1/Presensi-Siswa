@@ -173,7 +173,6 @@ Gunakan **satu akun administrator** yang sama untuk pengujian dan demonstrasi ap
 - **Username:** `Willy`
 - **Password:** `12345678`
 
-
 ## Database dan ERD
 
 Database aplikasi bernama **`presensi_siswa`**. Database memiliki tiga tabel inti sesuai gambar kerja dan satu tabel pendukung untuk autentikasi administrator.
@@ -287,7 +286,6 @@ UUK/
 └── setup_admin.php
 ```
 
-
 ## Hasil Pengujian
 
 Berikut hasil pengujian berdasarkan delapan skenario yang telah dijalankan pada aplikasi.
@@ -355,7 +353,6 @@ Berikut hasil pengujian berdasarkan delapan skenario yang telah dijalankan pada 
 - **Bukti tangkapan layar:**
 
 ![Bukti pengujian 8 - Pencarian sebagian nama siswa](docs/screenshots/testing/08-pencarian-sebagian-nama.png)
-
 
 ## Tangkapan Layar Halaman
 
