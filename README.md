@@ -4,7 +4,7 @@
 
 <p>Aplikasi pengelolaan kelas, data siswa, dan presensi melalui simulasi tap menggunakan NISN.</p>
 
-<p><strong>Project Uji Unjuk Kerja (UUK) PPLG</strong></p>
+<p><strong>Project Uji Unit Kompetensi (UUK) PPLG</strong></p>
 
 <p>
   <img src="https://img.shields.io/badge/PHP-Native-777BB4?style=flat&logo=php&logoColor=white" alt="PHP Native">
