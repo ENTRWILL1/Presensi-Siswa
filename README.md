@@ -17,7 +17,7 @@ Aplikasi web untuk mengelola data kelas, data siswa, dan pencatatan kehadiran si
 - [Database dan ERD](#database-dan-erd)
 - [Struktur Folder](#struktur-folder)
 - [Hasil Pengujian](#hasil-pengujian)
-- [Tangkapan Layar](#tangkapan-layar)
+- [Tangkapan Layar Halaman](#tangkapan-layar-halaman)
 
 ---
 
@@ -29,15 +29,13 @@ Aplikasi ini menggunakan satu jenis akun, yaitu **Administrator**. Administrator
 
 ## Fitur Aplikasi
 
-| Fitur | Keterangan |
-|---|---|
-| Login dan logout | Administrator masuk menggunakan username dan password, lalu dapat mengakhiri sesi melalui fitur logout. |
-| Dashboard | Menampilkan ringkasan data kelas, siswa, presensi hari ini, dan catatan presensi terbaru. |
-| Kelola kelas | Menampilkan, menambahkan, mengubah, dan menghapus data kelas. Kelas yang masih memiliki siswa tidak dapat dihapus. |
-| Kelola siswa | Menampilkan, mencari, menambahkan, mengubah, dan menghapus data siswa. |
-| Validasi NISN | Memastikan NISN berisi tepat 10 digit dan tidak digunakan oleh siswa lain. |
-| Simulasi tap kartu | Menerima NISN siswa terdaftar dan menyimpan catatan presensi dengan waktu otomatis. |
-| Rekap presensi | Menampilkan catatan presensi beserta informasi siswa dan kelas, serta menyediakan pencarian dan filter. Catatan presensi yang keliru dapat dihapus. |
+- **Login dan logout:** Administrator masuk menggunakan username dan password, lalu dapat mengakhiri sesi melalui fitur logout.
+- **Dashboard:** Menampilkan ringkasan data kelas, siswa, presensi hari ini, dan catatan presensi terbaru.
+- **Kelola kelas:** Menampilkan, menambahkan, mengubah, dan menghapus data kelas. Kelas yang masih memiliki siswa tidak dapat dihapus.
+- **Kelola siswa:** Menampilkan, mencari, menambahkan, mengubah, dan menghapus data siswa.
+- **Validasi NISN:** Memastikan NISN berisi tepat 10 digit dan tidak digunakan oleh siswa lain.
+- **Simulasi tap kartu:** Menerima NISN siswa terdaftar dan menyimpan catatan presensi dengan waktu otomatis.
+- **Rekap presensi:** Menampilkan catatan presensi beserta informasi siswa dan kelas, serta menyediakan pencarian dan filter. Catatan presensi yang keliru dapat dihapus.
 
 ## Teknologi
 
@@ -91,15 +89,13 @@ Buka file:
 config/database.php
 ```
 
-Konfigurasi bawaan untuk Laragon adalah sebagai berikut:
+Konfigurasi bawaan untuk Laragon:
 
-| Pengaturan | Nilai bawaan |
-|---|---|
-| Host | `127.0.0.1` |
-| Database | `presensi_siswa` |
-| Username | `root` |
-| Password | Kosong |
-| BASE_URL | `/UUK` |
+- **Host:** `127.0.0.1`
+- **Database:** `presensi_siswa`
+- **Username:** `root`
+- **Password:** kosong
+- **BASE_URL:** `/UUK`
 
 Sesuaikan konfigurasi tersebut apabila username, password, host MariaDB, atau nama folder project berbeda.
 
@@ -129,15 +125,13 @@ Masuk menggunakan username dan password administrator yang telah dibuat. Setelah
 
 ## Akun Demo
 
-Gunakan **satu akun administrator** yang sama untuk pengujian dan demonstrasi aplikasi. Isi bagian berikut menggunakan username dan password demo yang benar-benar sudah dibuat melalui `setup_admin.php`.
+Gunakan **satu akun administrator** yang sama untuk pengujian dan demonstrasi aplikasi.
 
-| Keterangan | Akun Demo |
-|---|---|
-| Jenis akun | Administrator |
-| Username | `Willy` |
-| Password | `12345678` |
+- **Jenis akun:** Administrator
+- **Username:** `Willy`
+- **Password:** `12345678`
 
-> **Sebelum README dikumpulkan:** ganti `ISI_USERNAME_DEMO` dan `ISI_PASSWORD_DEMO` dengan informasi akun demo yang benar. Gunakan akun khusus demonstrasi dan pastikan akun tersebut tersedia pada database yang digunakan saat penilaian.
+Pastikan username dan password di atas sama dengan akun demo yang benar-benar sudah dibuat melalui `setup_admin.php` dan tersedia pada database yang digunakan saat penilaian. Gunakan akun khusus demonstrasi, bukan akun pribadi.
 
 ## Database dan ERD
 
@@ -156,45 +150,35 @@ Pada gambar kerja, atribut Foreign Key tidak digambarkan. Kolom penghubung ditam
 
 ### Kolom penghubung (Foreign Key)
 
-| Tabel | Kolom | Keterangan |
-|---|---|---|
-| `siswa` | `id_kelas` | Foreign Key yang mengacu ke `kelas.id_kelas`. |
-| `presensi` | `nisn` | Foreign Key yang mengacu ke `siswa.nisn`. |
+- Pada tabel `siswa`, kolom `id_kelas` merupakan Foreign Key yang mengacu ke `kelas.id_kelas`.
+- Pada tabel `presensi`, kolom `nisn` merupakan Foreign Key yang mengacu ke `siswa.nisn`.
 
 ### Rincian tabel database
 
 #### 1. Tabel `kelas`
 
-| Kolom | Tipe Data | Keterangan |
-|---|---|---|
-| `id_kelas` | `INT` | Primary Key dan Auto Increment. |
-| `nama_kelas` | `VARCHAR(20)` | Nama kelas, wajib diisi dan unik. |
-| `jurusan` | `VARCHAR(50)` | Nama jurusan, wajib diisi. |
+- `id_kelas` — `INT`, Primary Key dan Auto Increment.
+- `nama_kelas` — `VARCHAR(20)`, nama kelas, wajib diisi dan unik.
+- `jurusan` — `VARCHAR(50)`, nama jurusan, wajib diisi.
 
 #### 2. Tabel `siswa`
 
-| Kolom | Tipe Data | Keterangan |
-|---|---|---|
-| `nisn` | `CHAR(10)` | Primary Key, menyimpan NISN 10 digit. |
-| `nama` | `VARCHAR(100)` | Nama siswa, wajib diisi. |
-| `alamat` | `VARCHAR(255)` | Alamat siswa, boleh kosong. |
-| `id_kelas` | `INT` | Foreign Key yang mengacu ke `kelas.id_kelas`. |
+- `nisn` — `CHAR(10)`, Primary Key, menyimpan NISN 10 digit.
+- `nama` — `VARCHAR(100)`, nama siswa, wajib diisi.
+- `alamat` — `VARCHAR(255)`, alamat siswa, boleh kosong.
+- `id_kelas` — `INT`, Foreign Key yang mengacu ke `kelas.id_kelas`.
 
 #### 3. Tabel `presensi`
 
-| Kolom | Tipe Data | Keterangan |
-|---|---|---|
-| `id` | `INT` | Primary Key dan Auto Increment. |
-| `nisn` | `CHAR(10)` | Foreign Key yang mengacu ke `siswa.nisn`. |
-| `tanggal_waktu` | `DATETIME` | Waktu presensi, otomatis menggunakan `CURRENT_TIMESTAMP`. |
+- `id` — `INT`, Primary Key dan Auto Increment.
+- `nisn` — `CHAR(10)`, Foreign Key yang mengacu ke `siswa.nisn`.
+- `tanggal_waktu` — `DATETIME`, waktu presensi, otomatis menggunakan `CURRENT_TIMESTAMP`.
 
 #### 4. Tabel `users` (pendukung login)
 
-| Kolom | Tipe Data | Keterangan |
-|---|---|---|
-| `id_user` | `INT` | Primary Key dan Auto Increment. |
-| `username` | `VARCHAR(50)` | Username administrator dan harus unik. |
-| `password` | `VARCHAR(255)` | Menyimpan password dalam bentuk hash. |
+- `id_user` — `INT`, Primary Key dan Auto Increment.
+- `username` — `VARCHAR(50)`, username administrator dan harus unik.
+- `password` — `VARCHAR(255)`, menyimpan password dalam bentuk hash.
 
 Tabel `users` merupakan tabel pendukung autentikasi administrator dan bukan bagian dari tiga entitas utama pada ERD gambar kerja.
 
@@ -219,6 +203,7 @@ UUK/
 ├── docs/
 │   ├── erd.svg
 │   └── screenshots/
+│       └── testing/
 ├── kelas/
 │   ├── create.php
 │   ├── edit.php
@@ -247,22 +232,77 @@ UUK/
 
 ## Hasil Pengujian
 
-Pengujian berikut merupakan delapan skenario yang telah dijalankan pada aplikasi.
+Delapan skenario berikut telah dijalankan pada aplikasi. Setiap skenario dilengkapi tempat untuk menampilkan bukti tangkapan layar. Simpan screenshot asli sesuai nama file dan lokasi yang tercantum agar gambar muncul di README GitHub.
 
-| No. | Skenario Pengujian | Hasil yang Diharapkan | Hasil Pengujian |
-|---:|---|---|---|
-| 1 | Login menggunakan password yang salah. | Login ditolak dan pesan kesalahan ditampilkan. | **Lulus** |
-| 2 | Membuka halaman yang dilindungi melalui URL tanpa login. | Pengguna diarahkan ke halaman login. | **Lulus** |
-| 3 | Menambahkan siswa dengan NISN 9 digit. | Validasi menolak data, pesan kesalahan tampil, dan isian form tidak hilang. | **Lulus** |
-| 4 | Menambahkan siswa dengan NISN yang sudah terdaftar. | Data ditolak dan pesan bahwa NISN sudah terdaftar ditampilkan. | **Lulus** |
-| 5 | Simulasi tap menggunakan NISN yang tidak terdaftar. | Tap ditolak dan pesan yang jelas ditampilkan. | **Lulus** |
-| 6 | Simulasi tap menggunakan NISN yang valid. | Catatan muncul pada rekap hari ini dengan waktu otomatis. | **Lulus** |
-| 7 | Menghapus kelas yang masih memiliki siswa. | Penghapusan ditolak dan alasan ditampilkan. | **Lulus** |
-| 8 | Mencari siswa menggunakan sebagian nama. | Hanya siswa yang sesuai dengan kata pencarian ditampilkan. | **Lulus** |
+### 1. Login menggunakan password yang salah
 
-## Tangkapan Layar
+- **Hasil yang diharapkan:** Login ditolak dan pesan kesalahan ditampilkan.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
 
-Masukkan tangkapan layar asli dari aplikasi yang berjalan ke folder `docs/screenshots/`. Gunakan nama file yang sama seperti contoh di bawah agar gambar tampil di README.
+![Bukti pengujian 1 - Login dengan password salah](docs/screenshots/testing/01-login-password-salah.png)
+
+### 2. Membuka halaman yang dilindungi melalui URL tanpa login
+
+- **Hasil yang diharapkan:** Pengguna diarahkan ke halaman login.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 2 - Akses halaman tanpa login](docs/screenshots/testing/02-akses-tanpa-login.png)
+
+### 3. Menambahkan siswa dengan NISN 9 digit
+
+- **Hasil yang diharapkan:** Validasi menolak data, pesan kesalahan tampil, dan isian form tidak hilang.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 3 - NISN 9 digit](docs/screenshots/testing/03-nisn-9-digit.png)
+
+### 4. Menambahkan siswa dengan NISN yang sudah terdaftar
+
+- **Hasil yang diharapkan:** Data ditolak dan pesan bahwa NISN sudah terdaftar ditampilkan.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 4 - NISN duplikat](docs/screenshots/testing/04-nisn-duplikat.png)
+
+### 5. Simulasi tap menggunakan NISN yang tidak terdaftar
+
+- **Hasil yang diharapkan:** Tap ditolak dan pesan yang jelas ditampilkan.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 5 - NISN tidak terdaftar](docs/screenshots/testing/05-tap-nisn-tidak-terdaftar.png)
+
+### 6. Simulasi tap menggunakan NISN yang valid
+
+- **Hasil yang diharapkan:** Catatan muncul pada rekap hari ini dengan waktu otomatis.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 6 - Tap dengan NISN valid dan hasil rekap](docs/screenshots/testing/06-tap-nisn-valid.png)
+
+### 7. Menghapus kelas yang masih memiliki siswa
+
+- **Hasil yang diharapkan:** Penghapusan ditolak dan alasan ditampilkan.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 7 - Menghapus kelas yang masih memiliki siswa](docs/screenshots/testing/07-hapus-kelas-berisi-siswa.png)
+
+### 8. Mencari siswa menggunakan sebagian nama
+
+- **Hasil yang diharapkan:** Hanya siswa yang sesuai dengan kata pencarian ditampilkan.
+- **Hasil pengujian:** **Berhasil / Lulus.**
+- **Bukti tangkapan layar:**
+
+![Bukti pengujian 8 - Pencarian sebagian nama siswa](docs/screenshots/testing/08-pencarian-sebagian-nama.png)
+
+> **Catatan:** Ganti seluruh gambar bukti di atas dengan screenshot asli hasil pengujian. Jangan hanya membuat folder atau menuliskan nama file; file gambar PNG/JPG-nya juga harus dimasukkan ke folder `docs/screenshots/testing/`.
+
+## Tangkapan Layar Halaman
+
+Selain bukti pengujian, masukkan tangkapan layar halaman utama aplikasi ke folder `docs/screenshots/`.
 
 ### 1. Halaman Login
 
