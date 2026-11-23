@@ -146,7 +146,6 @@ Gunakan **satu akun administrator** yang sama untuk pengujian dan demonstrasi ap
 - **Username:** `Willy`
 - **Password:** `12345678`
 
-Pastikan username dan password di atas sama dengan akun demo yang benar-benar sudah dibuat melalui `setup_admin.php` dan tersedia pada database yang digunakan saat penilaian. Gunakan akun khusus demonstrasi, bukan akun pribadi.
 
 ## Database dan ERD
 
@@ -199,7 +198,7 @@ Tabel `users` merupakan tabel pendukung autentikasi administrator dan bukan bagi
 
 ## Struktur Folder
 
-Berikut struktur folder project setelah file ERD dan seluruh screenshot dimasukkan. Nama file screenshot harus sama dengan yang digunakan pada bagian dokumentasi di bawah.
+Berikut struktur folder aplikasi dan dokumentasi project.
 
 ```text
 UUK/
@@ -261,11 +260,10 @@ UUK/
 └── setup_admin.php
 ```
 
-**Catatan:** `erd.png` dan seluruh file screenshot harus benar-benar disimpan pada lokasi tersebut. Struktur di atas menunjukkan susunan akhir yang diharapkan setelah semua gambar ditambahkan.
 
 ## Hasil Pengujian
 
-Delapan skenario berikut telah dijalankan pada aplikasi. Setiap skenario dilengkapi tempat untuk menampilkan bukti tangkapan layar. Simpan screenshot asli sesuai nama file dan lokasi yang tercantum agar gambar muncul di README GitHub.
+Berikut hasil pengujian berdasarkan delapan skenario yang telah dijalankan pada aplikasi.
 
 ### 1. Login menggunakan password yang salah
 
@@ -331,11 +329,10 @@ Delapan skenario berikut telah dijalankan pada aplikasi. Setiap skenario dilengk
 
 ![Bukti pengujian 8 - Pencarian sebagian nama siswa](docs/screenshots/testing/08-pencarian-sebagian-nama.png)
 
-> **Catatan:** Ganti seluruh gambar bukti di atas dengan screenshot asli hasil pengujian. Jangan hanya membuat folder atau menuliskan nama file; file gambar PNG/JPG-nya juga harus dimasukkan ke folder `docs/screenshots/testing/`.
 
 ## Tangkapan Layar Halaman
 
-Selain bukti pengujian, masukkan tangkapan layar halaman utama aplikasi ke folder `docs/screenshots/`.
+Berikut tangkapan layar halaman utama Sistem Presensi Siswa.
 
 ### 1. Halaman Login
 
