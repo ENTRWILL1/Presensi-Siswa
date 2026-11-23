@@ -184,6 +184,8 @@ Tabel `users` merupakan tabel pendukung autentikasi administrator dan bukan bagi
 
 ## Struktur Folder
 
+Berikut struktur folder project setelah file ERD dan seluruh screenshot dimasukkan. Nama file screenshot harus sama dengan yang digunakan pada bagian dokumentasi di bawah.
+
 ```text
 UUK/
 ├── app/
@@ -201,9 +203,23 @@ UUK/
 ├── config/
 │   └── database.php
 ├── docs/
-│   ├── erd.svg
+│   ├── erd.png
 │   └── screenshots/
+│       ├── 01-login.png
+│       ├── 02-dashboard.png
+│       ├── 03-data-kelas.png
+│       ├── 04-data-siswa.png
+│       ├── 05-simulasi-tap.png
+│       ├── 06-rekap-presensi.png
 │       └── testing/
+│           ├── 01-login-password-salah.png
+│           ├── 02-akses-tanpa-login.png
+│           ├── 03-nisn-9-digit.png
+│           ├── 04-nisn-duplikat.png
+│           ├── 05-tap-nisn-tidak-terdaftar.png
+│           ├── 06-tap-nisn-valid.png
+│           ├── 07-hapus-kelas-berisi-siswa.png
+│           └── 08-pencarian-sebagian-nama.png
 ├── kelas/
 │   ├── create.php
 │   ├── edit.php
@@ -229,6 +245,8 @@ UUK/
 ├── schema.sql
 └── setup_admin.php
 ```
+
+**Catatan:** `erd.png` dan seluruh file screenshot harus benar-benar disimpan pada lokasi tersebut. Struktur di atas menunjukkan susunan akhir yang diharapkan setelah semua gambar ditambahkan.
 
 ## Hasil Pengujian
 
