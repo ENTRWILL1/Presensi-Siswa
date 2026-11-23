@@ -44,21 +44,48 @@ Aplikasi ini menggunakan satu jenis akun, yaitu **Administrator**. Administrator
 
 ## Fitur Aplikasi
 
-- **Login dan logout:** Administrator masuk menggunakan username dan password, lalu dapat mengakhiri sesi melalui fitur logout.
-- **Dashboard:** Menampilkan ringkasan data kelas, siswa, presensi hari ini, dan catatan presensi terbaru.
-- **Kelola kelas:** Menampilkan, menambahkan, mengubah, dan menghapus data kelas. Kelas yang masih memiliki siswa tidak dapat dihapus.
-- **Kelola siswa:** Menampilkan, mencari, menambahkan, mengubah, dan menghapus data siswa.
-- **Validasi NISN:** Memastikan NISN berisi tepat 10 digit dan tidak digunakan oleh siswa lain.
-- **Simulasi tap kartu:** Menerima NISN siswa terdaftar dan menyimpan catatan presensi dengan waktu otomatis.
-- **Rekap presensi:** Menampilkan catatan presensi beserta informasi siswa dan kelas, serta menyediakan pencarian dan filter. Catatan presensi yang keliru dapat dihapus.
+Aplikasi Sistem Presensi Siswa memiliki delapan fitur utama dengan satu jenis pengguna, yaitu **Administrator**.
+
+1. **Login**
+
+   Administrator dapat masuk ke aplikasi menggunakan username dan password.
+
+2. **Logout**
+
+   Administrator dapat keluar dari aplikasi untuk mengakhiri sesi login.
+
+3. **Kelola Kelas (CRUD)**
+
+   Administrator dapat menambah, melihat, mengubah, dan menghapus data kelas. Data awal kelas disediakan melalui seeder.
+
+4. **Kelola Siswa (CRUD)**
+
+   Administrator dapat menambah, melihat, mengubah, dan menghapus data siswa.
+
+5. **Simulasi Tap Kartu (Tambah Presensi)**
+
+   Administrator dapat memasukkan NISN siswa yang terdaftar untuk menambahkan catatan presensi. Tanggal dan waktu presensi diisi secara otomatis.
+
+6. **Rekap Presensi (Lihat dan Hapus Log)**
+
+   Administrator dapat melihat catatan presensi siswa dan menghapus log presensi.
+
+7. **Pencarian Siswa**
+
+   Administrator dapat mencari data siswa berdasarkan nama atau NISN.
+
+8. **Pencarian dan Filter Presensi**
+
+   Administrator dapat mencari dan memfilter data presensi.
 
 ## Teknologi
 
-- **Bahasa pemrograman:** PHP Native
-- **Database:** MariaDB / MySQL
-- **Koneksi database:** PDO
-- **Frontend:** HTML dan CSS
-- **Server lokal:** Laragon (Apache dan MariaDB)
+- **Bahasa dan platform:** PHP Native tanpa framework.
+- **Konsep pemrograman:** Object-Oriented Programming (OOP).
+- **Koneksi database:** PDO.
+- **Database:** MariaDB.
+- **Frontend:** HTML dan CSS.
+- **Server lokal:** Laragon (Apache dan MariaDB).
 
 ## Persyaratan
 
@@ -374,7 +401,7 @@ Berikut tangkapan layar halaman utama Sistem Presensi Siswa.
 
 ---
 
-**Dibuat untuk memenuhi kebutuhan project Uji Unjuk Kerja (UUK) PPLG.**
+**Dibuat untuk memenuhi kebutuhan project Uji Unit Kompetensi (UUK) PPLG.**
 
 <sub>Sistem Presensi Siswa · PHP Native · MariaDB</sub>
 
