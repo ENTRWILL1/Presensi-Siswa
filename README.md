@@ -139,7 +139,7 @@ Database aplikasi bernama **`presensi_siswa`**. Database memiliki tiga tabel int
 
 ### ERD konseptual sesuai gambar kerja
 
-![ERD Sistem Presensi Siswa](docs/erd.svg)
+![ERD Sistem Presensi Siswa](docs/erd.png)
 
 **Relasi pada ERD:**
 
