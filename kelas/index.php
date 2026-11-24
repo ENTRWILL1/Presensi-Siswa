@@ -57,15 +57,10 @@ include __DIR__ . '/../layouts/navbar.php';
                             <td><?= e($dataKelas['jurusan']) ?></td>
                             <td><?= (int) $dataKelas['jumlah_siswa'] ?></td>
                             <td class="actions">
-                                <a
-                                    class="text-link"
-                                    href="<?= e(BASE_URL) ?>/kelas/edit.php?id_kelas=<?= (int) $dataKelas['id_kelas'] ?>"
-                                >Edit</a>
-                                <form
-                                    method="post"
-                                    action="<?= e(BASE_URL) ?>/kelas/delete.php"
-                                    onsubmit="return confirm('Hapus kelas ini?')"
-                                >
+                                <a class="text-link"
+                                    href="<?= e(BASE_URL) ?>/kelas/edit.php?id_kelas=<?= (int) $dataKelas['id_kelas'] ?>">Edit</a>
+                                <form method="post" action="<?= e(BASE_URL) ?>/kelas/delete.php"
+                                    onsubmit="return confirm('Hapus kelas ini?')">
                                     <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
                                     <input type="hidden" name="id_kelas" value="<?= (int) $dataKelas['id_kelas'] ?>">
                                     <button type="submit" class="danger-link">Hapus</button>

@@ -100,20 +100,12 @@ include __DIR__ . '/../layouts/navbar.php';
 
 <section class="panel">
     <form method="get" class="filter-form">
-        <input
-            type="search"
-            name="q"
-            value="<?= e($kataKunci) ?>"
-            placeholder="Cari nama siswa atau NISN..."
-        >
+        <input type="search" name="q" value="<?= e($kataKunci) ?>" placeholder="Cari nama siswa atau NISN...">
         <input type="date" name="tanggal" value="<?= e($tanggalDipilih) ?>">
         <select name="id_kelas">
             <option value="">Semua Kelas</option>
             <?php foreach ($daftarKelas as $dataKelas): ?>
-                <option
-                    value="<?= (int) $dataKelas['id_kelas'] ?>"
-                    <?= $idKelasDipilih === (int) $dataKelas['id_kelas'] ? 'selected' : '' ?>
-                >
+                <option value="<?= (int) $dataKelas['id_kelas'] ?>" <?= $idKelasDipilih === (int) $dataKelas['id_kelas'] ? 'selected' : '' ?>>
                     <?= e($dataKelas['nama_kelas']) ?>
                 </option>
             <?php endforeach; ?>
@@ -148,11 +140,8 @@ include __DIR__ . '/../layouts/navbar.php';
                             <td><?= e($catatan['nama_kelas']) ?></td>
                             <td><?= e(date('d-m-Y H:i:s', strtotime($catatan['tanggal_waktu']))) ?></td>
                             <td class="actions">
-                                <form
-                                    method="post"
-                                    action="<?= e(BASE_URL) ?>/presensi/delete.php"
-                                    onsubmit="return confirm('Hapus catatan presensi ini?')"
-                                >
+                                <form method="post" action="<?= e(BASE_URL) ?>/presensi/delete.php"
+                                    onsubmit="return confirm('Hapus catatan presensi ini?')">
                                     <input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>">
                                     <input type="hidden" name="id" value="<?= (int) $catatan['id'] ?>">
                                     <button type="submit" class="danger-link">Hapus Log</button>
